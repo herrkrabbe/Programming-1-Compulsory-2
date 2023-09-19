@@ -29,13 +29,16 @@ void main() {
 			optionFactorial();
 			break;
 		case 2:
+			optionPolynomial();
 			break;
 		case 3:
+			optionMath();
 			break;
 		case 4:
 			isRunning = false;
 			break;
 		default:
+			std::cout << "Invalid number, please enter a new integer.\n";
 			break;
 		}
 		
@@ -56,7 +59,7 @@ void optionFactorial() {
 		std::cout << "Enter a integer. Values of 0 and higher return their factorial; negative values exit this calculator\n";
 		int input = inputInt();
 		if (input >= 0) {
-			factorial(input);
+			std::cout << "Factorial of " << input << " is " << factorial(input) << "\n";
 		}
 		else {
 			if (input > 20) {
@@ -114,7 +117,7 @@ void optionPolynomial() {
 /// </summary>
 void optionMath() {
 	bool isRunning = true;
-	std::cout << "Enter a pair of numbers to perform mathematical operations on";
+	std::cout << "Enter a pair of numbers to perform mathematical operations on\n";
 
 	double num1 = inputInt();
 	double num2 = inputInt();
@@ -188,13 +191,13 @@ void changepoly(int poly[4]) {
 	int d = 0;
 
 	cout << "Enter four integers to make a polynomial.\n";
-	cout << "a * X^3: enter a ";
+	cout << "a * X^3: enter a \n";
 	a = inputInt();
-	cout << "b * X^2: enter b ";
+	cout << "b * X^2: enter b \n";
 	b = inputInt();
-	cout << "c * X^1: enter c ";
+	cout << "c * X^1: enter c \n";
 	c = inputInt();
-	cout << "d: enter d ";
+	cout << "d: enter d \n";
 	d = inputInt();
 
 	poly[0] = a;

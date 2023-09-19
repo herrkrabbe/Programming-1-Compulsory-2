@@ -9,7 +9,7 @@
 /// <returns> num! </returns>
 unsigned long long int factorial(unsigned long long int num) {
 	if (num > 20) {
-		throw std::out_of_range("The factorial function can not provide accurate numbers for num > 20");
+		throw std::out_of_range("The factorial function can not provide accurate numbers for num > 20\n");
 	}
 	if (num == 0) {
 		return 1;
