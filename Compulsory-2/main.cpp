@@ -8,6 +8,7 @@ void optionFactorial();
 void optionPolynomial();
 void optionMath();
 int inputInt();
+void changepoly(int poly[4]);
 
 /// <summary>
 /// main menu function
@@ -73,7 +74,38 @@ void optionFactorial() {
 /// menu for polynomial operations
 /// </summary>
 void optionPolynomial() {
+	int poly1[4] = { 0, 0, 0, 0 };
+	int poly2[4] = { 0, 0, 0, 0 };
 
+	changepoly(poly1);
+	changepoly(poly2);
+
+	bool exit = false;
+	while (!exit) {
+		std::cout << "User, please enter a number for your action.\n";
+		std::cout << "1. Multiply polynomials\n";
+		std::cout << "2. Add polynomials\n";
+		std::cout << "3. Derive the first polynom\n";
+		std::cout << "4. Exit\n";
+		int choice = 0;
+		std::cin >> choice;
+		if (!cin.fail()) {
+			switch (choice) {
+			case(1):
+				multiplypoly(poly1, poly2);
+				break;
+			case(2):
+				addpoly(poly1, poly2);
+				break;
+			case(3):
+				derivepoly(poly1);
+				break;
+			case(4):
+				exit = true;
+				break;
+			}
+		}
+	}
 }
 
 
@@ -99,16 +131,16 @@ void optionMath() {
 
 		switch (input) {
 		case 1:
-			add(num1, num2);
+			std::cout << "Sum: " << add(num1, num2) << "\n";
 			break;
 		case 2:
-			subtract(num1, num2);
+			std::cout << "Difference: " << subtract(num1, num2) << "\n";
 			break;
 		case 3:
-			multiply(num1, num2);
+			std::cout << "Product: " << multiply(num1, num2) << "\n";
 			break;
 		case 4:
-			divide(num1, num2);
+			std::cout << "Quotient: " << divide(num1, num2) << "\n";
 			break;
 		case 5:
 			num1 = inputInt();
@@ -143,4 +175,33 @@ int inputInt() {
 	}
 	return input;
 }
+
+
+/// <summary>
+/// changes the values of poly. This function is in main because it requires inputInt function.
+/// </summary>
+/// <param name="poly"></param>
+void changepoly(int poly[4]) {
+	int a = 0;
+	int b = 0;
+	int c = 0;
+	int d = 0;
+
+	cout << "Enter four integers to make a polynomial.\n";
+	cout << "a * X^3: enter a ";
+	a = inputInt();
+	cout << "b * X^2: enter b ";
+	b = inputInt();
+	cout << "c * X^1: enter c ";
+	c = inputInt();
+	cout << "d: enter d ";
+	d = inputInt();
+
+	poly[0] = a;
+	poly[1] = b;
+	poly[2] = c;
+	poly[3] = d;
+}
+
+
 
