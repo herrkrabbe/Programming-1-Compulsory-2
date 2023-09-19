@@ -9,6 +9,9 @@ void optionPolynomial();
 void optionMath();
 int inputInt();
 
+/// <summary>
+/// main menu function
+/// </summary>
 void main() {
 
 	bool isRunning = true;
@@ -66,12 +69,17 @@ void optionFactorial() {
 	}
 }
 
+/// <summary>
+/// menu for polynomial operations
+/// </summary>
 void optionPolynomial() {
 
 }
 
 
-
+/// <summary>
+/// Menu for basic math operations
+/// </summary>
 void optionMath() {
 	bool isRunning = true;
 	std::cout << "Enter a pair of numbers to perform mathematical operations on";
@@ -118,6 +126,12 @@ void optionMath() {
 	}
 }
 
+/// <summary>
+/// helper function to get an integer input.
+/// 
+/// Recursively calls itself if the user enters an invalid input
+/// </summary>
+/// <returns></returns>
 int inputInt() {
 	int input;
 	std::cin >> input;
