@@ -131,6 +131,7 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="factorial.h" />
+    <ClInclude Include="math.h" />
     <ClInclude Include="modify.h" />
     <ClInclude Include="polymath.h" />
   </ItemGroup>
