@@ -36,6 +36,6 @@ double multiply(double multiplicand, double multiplicator) {
 /// <param name="dividend"></param>
 /// <param name="divisor"></param>
 /// <returns>quotient</returns>
-double divde(double dividend, double divisor) {
+double divide(double dividend, double divisor) {
 	return dividend / divisor;
 }
